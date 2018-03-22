@@ -1,6 +1,6 @@
 essential-packages:
   pgk.installed:
-    - pgks:
+    - pkgs:
       - bash
       - build-essentials
       - git
