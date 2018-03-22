@@ -9,7 +9,7 @@ essential-packages:
 
 app-packages:
   pkg.installed:
-    pkgs:
+    - pkgs:
       - python3-pip 
       - python3-dev 
       - nginx
