@@ -1,5 +1,5 @@
 essential-packages:
-  pgk.installed:
+  pkg.installed:
     - pkgs:
       - bash
       - build-essentials
