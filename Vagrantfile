@@ -1,6 +1,7 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
-
+require 'yaml'
+settings = YAML.load_file '.config.yaml'
 # All Vagrant configuration is done below. The "2" in Vagrant.configure
 # configures the configuration version (we support older styles for
 # backwards compatibility). Please don't change it unless you know what
@@ -13,7 +14,7 @@ Vagrant.configure("2") do |config|
         override.vm.box = 'digital_ocean'
         override.vm.box_url = "https://github.com/devopsgroup-io/vagrant-digitalocean/raw/master/box/digital_ocean.box"
         override.nfs.functional = false
-        provider.token = '3801cb38bc6e287d4a17e081f875d717e35a6af61ccef79463de9f0b2bce51f8'
+        provider.token = settings['DO_API_TOKEN']
         provider.image = 'ubuntu-16-04-x64'
         provider.region = 'tor1'
         provider.size = 's-1vcpu-1gb'
