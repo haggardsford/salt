@@ -47,3 +47,16 @@ postgres:
     pkgs:
       - postgresql
       - postgresql-contrib
+
+postgres-adapter:
+  # Install using pip
+  pip.installed:
+    # The pip module we want to install
+    - name: psycopg2
+    # Absolute path to a virtual environment directory or absolute path to a pip executable
+    # We want to install python3 uwsgi so we use pip3 here
+    - bin_env: '/usr/bin/pip3'
+    # Require python-pip state to be run before this one
+    - require:
+      - pkg: python-pip
+
