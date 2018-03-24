@@ -44,7 +44,7 @@ uwsgi:
 
 postgres:
   pkg.installed:
-    pkgs:
+    - pkgs:
       - postgresql
       - postgresql-contrib
 
