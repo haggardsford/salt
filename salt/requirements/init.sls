@@ -42,3 +42,8 @@ uwsgi:
     - require:
       - pkg: python-pip
 
+postgres:
+  pkg.installed:
+    pkgs:
+      - postgresql
+      - postgresql-contrib
